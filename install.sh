@@ -69,7 +69,7 @@ if [ -f "$CERT_LIST" ]; then
             # Maven artifact: maven|repo-url|group-id|artifact-id|extension
             IFS='|' read -r _ repo_url group_id artifact_id extension <<< "$line"
             if download_maven_cert "$repo_url" "$group_id" "$artifact_id" "$extension"; then
-                ((CERT_COUNT++))
+                ((CERT_COUNT++)) || true
             fi
         else
             # Direct URL
@@ -77,7 +77,7 @@ if [ -f "$CERT_LIST" ]; then
             echo "    Downloading: $filename"
             if curl -fsSL "$line" -o "/tmp/$filename"; then
                 sudo cp "/tmp/$filename" /usr/local/share/ca-certificates/
-                ((CERT_COUNT++))
+                ((CERT_COUNT++)) || true
             else
                 echo "    Warning: Failed to download $line"
             fi
