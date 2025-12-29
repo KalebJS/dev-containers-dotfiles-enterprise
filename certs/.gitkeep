@@ -1,0 +1,2 @@
+# Place your .crt or .cert files in this directory
+# They will be installed to /usr/local/share/ca-certificates/ during setup
