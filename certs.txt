@@ -1,0 +1,10 @@
+# Certificate sources (one per line, lines starting with # are ignored)
+#
+# Supported formats:
+#
+# 1. Direct URL:
+#    https://example.com/certs/root-ca.crt
+#
+# 2. Maven artifact (auto-fetches latest version):
+#    maven|https://repo.example.com/maven|com.example|my-certs|crt
+#    Format: maven|<repo-url>|<group-id>|<artifact-id>|<extension>

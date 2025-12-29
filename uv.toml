@@ -1,0 +1,10 @@
+# uv configuration
+# https://docs.astral.sh/uv/reference/settings/
+
+# [index]
+# url = "https://your-private-pypi.example.com/simple/"
+# extra-index-url = ["https://pypi.org/simple/"]
+
+# [pip]
+# index-url = "https://your-private-pypi.example.com/simple/"
+# extra-index-url = ["https://pypi.org/simple/"]
